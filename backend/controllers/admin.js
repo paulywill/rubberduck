@@ -1,11 +1,15 @@
 const Duck = require('../models/Duck');
 
 exports.getIndex = async (req, res) => {
+    
+    
     const duck = await Duck.find((data) => data);
 
     try {
         console.log(duck);
-        res.status(200).render('index', { duck: duck });
+        //res.status(200).render('index', { duck: duck });
+        res.json(duck);
+    
     } catch (error) {
         console.log(error);
     }
@@ -25,7 +29,7 @@ exports.getDuck = async (req, res) => {
 };
 
 exports.getAddDuck = (req, res) => {
-    res.status(200).render('edit-duck');
+    res.status(200).render('edit-duck', {editing: false});
 };
 
 exports.getEditDuck = async (req, res) => {

@@ -34,7 +34,7 @@ const App = () => {
                 <ul>
                   <li>
                     <h1>
-                      <a href="/{data.id}">{data.user}</a>
+                      <a href={data._id}>{data.user}</a>
                     </h1>
                   </li>
                   <li>

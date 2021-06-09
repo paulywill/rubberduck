@@ -6,18 +6,25 @@
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js",
-    "servers": "concurrently \"npm run dev\" \"cd ../frontend && npm run start\""
+    "servers": "concurrently \"npm run dev\" \"cd ../frontend && npm run start\"",
+    "test": "npx jest --coverage --verbose",
+    "test:watch": "npx jest --watchAll"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chai": "^4.3.4",
     "concurrently": "^6.2.0",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
+    "jest": "^27.0.4",
+    "mocha": "^9.0.0",
     "mongoose": "^5.12.12",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "sinon": "^7.5.0",
+    "sinon-mongoose": "^2.3.0"
   }
 }

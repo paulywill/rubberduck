@@ -9,7 +9,7 @@ const App = () => {
       try {
         console.log(data);
         setLoading(false);
-        setAnime(data);
+        setDuck(data);
       } catch (error) {
         console.log(error);
       }
@@ -17,7 +17,7 @@ const App = () => {
     getAPI();
   }, []);
 
-  const [anime, setAnime] = useState([]);
+  const [duck, setDuck] = useState([]);
   const [loading, setLoading] = useState(true);
 
   return (
@@ -29,7 +29,7 @@ const App = () => {
           <div>Loading</div>
         ) : (
           <div>
-            {anime.map((data) => (
+            {duck.map((data) => (
               <div key={data._id}>
                 <ul>
                   <li>
@@ -54,7 +54,7 @@ const App = () => {
       </div>
       <div>
         <h1>Add New Duck</h1>
-        <form method="POST" action="http://localhost:8080/add-anime">
+        <form method="POST" action="http://localhost:8080/add-duck">
           <div>
             <label>User</label>
             <input type="text" name="user" required />

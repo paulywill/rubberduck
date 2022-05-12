@@ -2,7 +2,7 @@
 const Duck = () => {
   
   
-  return (<div></div>);
+  return (<div>QUACK!</div>);
 
 };
 
